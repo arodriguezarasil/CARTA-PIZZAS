@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>IL FORNO DI ALESSANDRO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* =====================
+   AJUSTES GENERALES
+===================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #2b2b2b; /* fondo neutro para PDF */
+}
+
+/* =====================
+   CONTENEDOR CARTA
+===================== */
+.menu {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #faf7f2; /* papel elegante */
+    padding: 45px 55px 50px;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    position: relative;
+}
+
+/* FRANJA SUPERIOR ITALIA */
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 14px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        #1e7f43 0%,
+        #1e7f43 33.33%,
+        #ffffff 33.33%,
+        #ffffff 66.66%,
+        #8c1d18 66.66%,
+        #8c1d18 100%
+    );
+}
+
+/* =====================
+   TITULO
+===================== */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    margin: 10px 0 45px;
+    color: #8c1d18; /* rojo vino */
+    letter-spacing: 3px;
+}
+
+/* =====================
+   GRID PIZZAS
+===================== */
+.pizzas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 26px;
+}
+
+/* =====================
+   PIZZA ITEM
+===================== */
+.pizza {
+    display: block;
+}
+
+.pizza-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* NUMERO ELEGANTE */
+.numero {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #8c1d18; /* rojo elegante */
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* NOMBRE */
+.nombre {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* INGREDIENTES */
+.ingredientes {
+    font-size: 13px;
+    color: #555;
+    margin-left: 36px;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* =====================
+   IMPRESION / PDF
+===================== */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .menu {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu">
+    <h1>IL FORNO DI ALESSANDRO</h1>
+
+    <div class="pizzas">
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">1</div>
+                <div class="nombre">Margarita</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate y queso)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">2</div>
+                <div class="nombre">Carbonara</div>
+            </div>
+            <div class="ingredientes">(Salsa carbonara, cebolla, queso, bacon y champiñones)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">3</div>
+                <div class="nombre">Boloñesa</div>
+            </div>
+            <div class="ingredientes">(Salsa boloñesa, queso, bacon, carne picada y/o pollo ahumado)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">4</div>
+                <div class="nombre">Barbacoa</div>
+            </div>
+            <div class="ingredientes">(Salsa BBQ, queso, bacon, cebolla, carne picada y/o pollo ahumado)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">5</div>
+                <div class="nombre">Trufatta</div>
+            </div>
+            <div class="ingredientes">(Concentrado de trufa, queso, cebolla caramelizada, olivas negras y champiñones)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">6</div>
+                <div class="nombre">4 Quesos</div>
+            </div>
+            <div class="ingredientes">(Base de tomate, mozzarella, emmental, parmesano y queso azul)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">7</div>
+                <div class="nombre">Pepperoni</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate, queso, bacon y/o jamón dulce y pepperoni)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">8</div>
+                <div class="nombre">Mein Schatz</div>
+            </div>
+            <div class="ingredientes">(Sobrasada, queso, espárragos, cebolla caramelizada y queso de cabra)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">9</div>
+                <div class="nombre">Jamón y Queso</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate, queso y jamón dulce)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">10</div>
+                <div class="nombre">Jamón y Bacón</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate, queso, jamón dulce y bacon)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">11</div>
+                <div class="nombre">Atún y Bacon</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate, queso, atún y bacon)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">12</div>
+                <div class="nombre">La specità di Mister</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate, queso, bacon y/o jamón dulce, carne de kebab y salsa blanca)</div>
+        </div>
+
+        <div class="pizza">
+            <div class="pizza-header">
+                <div class="numero">13</div>
+                <div class="nombre">Cegarro amego?</div>
+            </div>
+            <div class="ingredientes">(Salsa de tomate, queso y jamón serrano)</div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
